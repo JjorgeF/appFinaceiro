@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import * as C from "./style";
+import * as C from "./styles";
 
-const Form = () => {
-    const [desc, setDesk] = useState("");
+const Form = ({ handleAdd }) => {
+    const [desc, setDesc] = useState("");
     const [amount, setAmount] = useState("");
     const [isExpense, setExpense] = useState("false");
+
+    const generateID = () => Math.round(Math.random() * 1000);
 
     const handleSave = () => {
         if (!desc || !amount) {
@@ -14,6 +16,18 @@ const Form = () => {
             alert("O valor tem que ser positivo!");
             return;
         }
+
+        const transaction = {
+            id: generateID(),
+            desc: desc,
+            amount: amount,
+            expense: isExpense,
+        };
+
+        handleAdd(transaction);
+
+        setDesc("");
+        setAmount("");
     };
     
     return ( 
@@ -21,7 +35,7 @@ const Form = () => {
             <C.Container>
                 <C.InputContent>
                     <C.Label>Descrição</C.Label>
-                    <C.Input value={desc} onChange={(e) => setDesk(e.target.value)} />
+                    <C.Input value={desc} onChange={(e) => setDesc(e.target.value)} />
                 </C.InputContent>
                 <C.InputContent>
                     <C.Label>Valor</C.Label>

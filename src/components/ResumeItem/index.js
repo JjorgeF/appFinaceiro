@@ -8,7 +8,7 @@ const ResumeItem = ({ title, Icon, value }) => {
             <C.HeaderTitle>{title}</C.HeaderTitle>
             <Icon />
         </C.Header>
-        <C.Total>999</C.Total>
+        <C.Total>{value}</C.Total>
     </C.Container>
   );
 };

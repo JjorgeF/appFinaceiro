@@ -1,4 +1,3 @@
-import { FaMaxcdn } from "react-icons/fa";
 import styled from "styled-components";
 
 export const Container = styled.div `
@@ -38,8 +37,9 @@ export const RadioGroup = styled.div`
 
     input {
         margin-left: 20px;
-        accent-color: black;
+        accent-color: yellow;
         margin-top: 0;
+        margin-right: 5px;
     }
 `;
 
