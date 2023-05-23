@@ -10,6 +10,7 @@ export const Container = styled.div `
     justify-content: space-around;
     padding: 15px 0px;
     gap: 10px;
+    border: solid black 2px;
 
     @media (max-width: 750px) {
         display: grid;
@@ -37,7 +38,7 @@ export const RadioGroup = styled.div`
 
     input {
         margin-left: 20px;
-        accent-color: yellow;
+        accent-color: red;
         margin-top: 0;
         margin-right: 5px;
     }
@@ -49,5 +50,5 @@ export const Button = styled.button`
     border-radius: 5px;
     cursor: pointer;
     color: white;
-    background-color: teal;
+    background-color: red;
 `;
