@@ -8,6 +8,7 @@ export const Table = styled.table`
     border-radius: 5px;
     max-width: 1120px;
     margin: 20px auto;
+    border: black 2px solid;
 `;
 
 export const THead = styled.thead``;

@@ -45,10 +45,10 @@ export const RadioGroup = styled.div`
 `;
 
 export const Button = styled.button`
-    padding: 5px 10px;
+    padding: 7px 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: 9px;
     cursor: pointer;
     color: white;
-    background-color: red;
+    background-color: blue;
 `;
